@@ -19,8 +19,9 @@ public class Conexion {
     
     
     public Connection cadena;
+    public static Conexion instancia;
     
-    public Conexion (){
+    private Conexion (){
          this.cadena = null;    
     }
     
@@ -41,6 +42,12 @@ public class Conexion {
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
+        
     }
-    
+    public synchronized static Conexion getInstancia(){
+        if (instancia==null) {
+            instancia = new Conexion();
+        }
+        return instancia;
+    }
 }
