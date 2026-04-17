@@ -175,5 +175,4 @@ public class CategoriaDAO implements CrudSimpleInterface<Categoria>{
         }
          return resp;   
     }
-    
 }
