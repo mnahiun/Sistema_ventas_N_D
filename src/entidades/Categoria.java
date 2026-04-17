@@ -55,7 +55,7 @@ public class Categoria {
     public void setActivo(boolean activo) {
         this.activo = activo;
     }
-
+    
     //Metodo toString
     @Override
     public String toString() {

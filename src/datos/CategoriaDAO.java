@@ -172,7 +172,6 @@ public class CategoriaDAO implements CrudSimpleInterface<Categoria>{
           ps=null;
           rs=null;
           CON.desconectar();
-          
         }
          return resp;   
     }

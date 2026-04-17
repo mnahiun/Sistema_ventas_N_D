@@ -42,7 +42,6 @@ public class Conexion {
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
-        
     }
     public synchronized static Conexion getInstancia(){
         if (instancia==null) {
