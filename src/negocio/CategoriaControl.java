@@ -30,10 +30,11 @@ public class CategoriaControl {
 
      for(Categoria item:lista){
         if(item.isActivo()){
-        estado = 'Activo';
+            
+        estado = "Activo";
 
         }else{
-            estado = 'inactivo';
+            estado = "Inactivo";
         }
 
         
@@ -54,14 +55,15 @@ public class CategoriaControl {
         obj.setNombre(nombre);
         obj.setDescripcion(descripcion);
         if(DATOS.insertar(obj)){
-            
+            return "OK";
+        }else{
+            return "Error en el registro";
         }
     }
     }
 
     public String actualizar(int id, String nombre, String nombreAnt, String descripcion){
-
-
+        
     }
 
     public String desactivar(int id){
