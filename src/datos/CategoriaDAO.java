@@ -14,10 +14,7 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import java.sql.SQLException;
 
-/**
- *
- * @author Nahin
- */
+
 public class CategoriaDAO implements CrudSimpleInterface<Categoria>{
 
     private final Conexion CON;
