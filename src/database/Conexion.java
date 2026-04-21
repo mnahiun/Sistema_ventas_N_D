@@ -36,6 +36,7 @@ public class Conexion {
         return this.cadena;
     }
     
+    
     public void desconectar(){
         try {
             this.cadena.close();

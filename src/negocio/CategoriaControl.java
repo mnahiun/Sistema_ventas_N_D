@@ -27,6 +27,7 @@ public class CategoriaControl {
 
      String estado;
      String[] registro =  new String[4];
+     
 
      for(Categoria item:lista){
         if(item.isActivo()){
@@ -43,7 +44,7 @@ public class CategoriaControl {
         registro [2] = item.getDescripcion();
         registro [3] = estado;
         this.modeloTabla.addRow(registro);
-
+    
      }
        return this.modeloTabla;
     }
@@ -63,20 +64,24 @@ public class CategoriaControl {
     }
 
     public String actualizar(int id, String nombre, String nombreAnt, String descripcion){
-        
+       
     }
 
     public String desactivar(int id){
-
+  
     }
 
     public String activar(int id){
-
+    
 
     }
 
     public int total(){
-
+        
     }
     
+    public int totalMostrados(){
+        
+        
+    }
 }
