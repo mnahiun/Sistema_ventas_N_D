@@ -11,10 +11,12 @@ public class CategoriaControl {
     private final CategoriaDAO DATOS;
     private Categoria obj;
     private DefaultTableModel modeloTabla;
+    public int registrosMostrados;
 
     public CategoriaControl(){
      this.DATOS= new CategoriaDAO();
      this.obj = new Categoria();
+     this.registrosMostrados=0;
 
     }
 
@@ -27,6 +29,7 @@ public class CategoriaControl {
 
      String estado;
      String[] registro =  new String[4];
+     this.registrosMostrados=0;
      
 
      for(Categoria item:lista){
@@ -44,6 +47,7 @@ public class CategoriaControl {
         registro [2] = item.getDescripcion();
         registro [3] = estado;
         this.modeloTabla.addRow(registro);
+        this.registrosMostrados=this.registrosMostrados+1;
     
      }
        return this.modeloTabla;
@@ -74,7 +78,6 @@ public class CategoriaControl {
                 return "Error en la actualización";
                 
                 }
-            
         }else {
             if (DATOS.existe(nombre)) {
                 return "El registro ya existe";
@@ -110,11 +113,12 @@ public class CategoriaControl {
     }
 
     public int total(){
-        
+        return DATOS.total();
     }
     
     public int totalMostrados(){
-        
+        return this.registrosMostrados;
         
     }
+    
 }
