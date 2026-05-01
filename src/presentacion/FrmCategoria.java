@@ -345,6 +345,7 @@ public class FrmCategoria extends javax.swing.JInternalFrame {
         }
      }
      
+     
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
@@ -408,6 +409,7 @@ public class FrmCategoria extends javax.swing.JInternalFrame {
         } else {
             this.mensajeError("Seleccione 1 registro ha activar");
         }
+              
     }//GEN-LAST:event_btnActivarActionPerformed
 
     
