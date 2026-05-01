@@ -8,10 +8,7 @@ import javax.swing.JOptionPane;
 import javax.swing.table.TableRowSorter;
 import negocio.CategoriaControl;
 
-/**
- *
- * @author Nahin
- */
+
 public class FrmCategoria extends javax.swing.JInternalFrame {
    private final CategoriaControl CONTROL;
    private String accion;
@@ -189,7 +186,7 @@ public class FrmCategoria extends javax.swing.JInternalFrame {
                     .addComponent(lbTotalRegistros, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnDesactivar)
                     .addComponent(btnActivar))
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         tabGeneral.addTab("Listado", jPanel1);
@@ -260,12 +257,12 @@ public class FrmCategoria extends javax.swing.JInternalFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGuardar)
                     .addComponent(btnCancelar))
-                .addContainerGap(187, Short.MAX_VALUE))
+                .addContainerGap(197, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(54, 54, 54)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(427, Short.MAX_VALUE)))
+                    .addContainerGap(437, Short.MAX_VALUE)))
         );
 
         tabGeneral.addTab("Mantenimiento", jPanel2);
@@ -280,7 +277,7 @@ public class FrmCategoria extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addComponent(tabGeneral))
+                .addComponent(tabGeneral, javax.swing.GroupLayout.DEFAULT_SIZE, 556, Short.MAX_VALUE))
         );
 
         pack();
@@ -310,21 +307,19 @@ public class FrmCategoria extends javax.swing.JInternalFrame {
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         if (txtNombre.getText().length()==0  || txtNombre.getText().length() > 20) {
-         JOptionPane.showMessageDialog(this, "Debes ingresar un nombre,  y no dende ser mayr a 20 caracteres, es obligatorio", "Sistema", JOptionPane.WARNING_MESSAGE );
+         JOptionPane.showMessageDialog(this, "Debes ingresar un nombre y no debe ser mayor a 20 caracteres, es obligatorio", "Sistema", JOptionPane.WARNING_MESSAGE );
          txtNombre.requestFocus();
          return;
          
      }
         if (txtDescripcion.getText().length() > 255) {
-            JOptionPane.showMessageDialog(this,"No debe ser mayor a 255 caracteres");
+            JOptionPane.showMessageDialog(this,"La descripción no debe ser mayor a 255 caracteres");
             txtDescripcion.requestFocus();
         }
         String resp;
      if (this.accion.equals("editar")) {
          // Editar
-     }else {
-       // Guardar 
-     }
+     
      resp= this.CONTROL.actualizar(Integer.parseInt(txtId.getText()),txtNombre.getText(), this.nombresAnt, txtDescripcion.getText());
         if (resp.equals("OK")) {
             this.mensajeOk("Actualizado correctamente ");
@@ -336,12 +331,10 @@ public class FrmCategoria extends javax.swing.JInternalFrame {
         }else {
              this.mensajeError(resp);
         }
-     //String resp;
-     if (this.accion.equals("editar")) {
-         // Editar
+   
      }else {
        // Guardar 
-     }
+     
      resp= this.CONTROL.insertar(txtNombre.getText(), txtDescripcion.getText());
         if (resp.equals("OK")) {
             this.mensajeOk("Registrado correctamente ");
@@ -350,6 +343,8 @@ public class FrmCategoria extends javax.swing.JInternalFrame {
         }else {
              this.mensajeError(resp);
         }
+     }
+     
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed

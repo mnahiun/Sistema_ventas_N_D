@@ -132,7 +132,7 @@ public class CategoriaDAO implements CrudSimpleInterface<Categoria>{
     public int total() {
         int totalRegistros=0;
         try {
-          ps=CON.conectar().prepareStatement("SELECT COUNT(id) categoria");
+          ps=CON.conectar().prepareStatement("SELECT COUNT(id) FROM categoria");
           rs=ps.executeQuery();
             while (rs.next()) {                
                 totalRegistros=rs.getInt("COUNT(id)");
@@ -165,7 +165,7 @@ public class CategoriaDAO implements CrudSimpleInterface<Categoria>{
 
         }catch (SQLException e ){
             JOptionPane.showMessageDialog(null, e.getMessage());
-        }finally{
+        }finally {
           ps=null;
           rs=null;
           CON.desconectar();
