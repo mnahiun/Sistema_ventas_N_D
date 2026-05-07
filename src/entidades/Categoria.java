@@ -1,10 +1,6 @@
 
 package entidades;
 
-/**
- *
- * @author Nahin
- */
 public class Categoria {
     
    private int id;
