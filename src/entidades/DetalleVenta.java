@@ -31,12 +31,25 @@ public class DetalleVenta {
         this.subtotal = subtotal;
     }
 
+    public DetalleVenta(int articuloId, String articuloCodigo, String articuloNombre, int articuloStock, int cantidad, double precio, double descuento, double subtotal) {
+        this.articuloId = articuloId;
+        this.articuloCodigo = articuloCodigo;
+        this.articuloNombre = articuloNombre;
+        this.articuloStock = articuloStock;
+        this.cantidad = cantidad;
+        this.precio = precio;
+        this.descuento = descuento;
+        this.subtotal = subtotal;
+    }
+
     public DetalleVenta(int articuloId, int cantidad, double precio, double subtotal) {
         this.articuloId = articuloId;
         this.cantidad = cantidad;
         this.precio = precio;
         this.subtotal = subtotal;
     }
+    
+    
 
     public int getId() {
         return id;

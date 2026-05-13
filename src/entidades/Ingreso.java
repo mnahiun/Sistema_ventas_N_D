@@ -19,12 +19,13 @@ public class Ingreso {
     private double impuesto;
     private double total;
     private String  estado;
-    private List<detalleIngreso> detalles;
+    private List<DetalleIngreso> detalles;
 
+    
     public Ingreso() {
     }
 
-    public Ingreso(int id, int usuarioId, String usuarioNombre, int personaId, String personaNombre, String tipoComprobante, String serieComprobante, String numComprobante, Date fecha, double impuesto, double total, String estado, List<detalleIngreso> detalles) {
+    public Ingreso(int id, int usuarioId, String usuarioNombre, int personaId, String personaNombre, String tipoComprobante, String serieComprobante, String numComprobante, Date fecha, double impuesto, double total, String estado, List<DetalleIngreso> detalles) {
         this.id = id;
         this.usuarioId = usuarioId;
         this.usuarioNombre = usuarioNombre;

@@ -1,14 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package entidades;
 
-/**
- *
- * @author NahinAlfonsoDuarteMa
- */
-public class detalleIngreso {
+public class DetalleIngreso {
    
     private int id;
     private int ingresoId;
@@ -19,10 +12,11 @@ public class detalleIngreso {
     private double precio;
     private double subtotal;
 
-    public detalleIngreso() {
+    public DetalleIngreso() {
     }
 
-    public detalleIngreso(int id, int ingresoId, int articuloId, String articuloCodigo, String articuloNombre, int cantidad, double precio, double subtotal) {
+    
+    public DetalleIngreso(int id, int ingresoId, int articuloId, String articuloCodigo, String articuloNombre, int cantidad, double precio, double subtotal) {
         this.id = id;
         this.ingresoId = ingresoId;
         this.articuloId = articuloId;
@@ -33,7 +27,7 @@ public class detalleIngreso {
         this.subtotal = subtotal;
     }
 
-    public detalleIngreso(int articuloId, int cantidad, double precio) {
+    public DetalleIngreso(int articuloId, int cantidad, double precio) {
         this.articuloId = articuloId;
         this.cantidad = cantidad;
         this.precio = precio;
@@ -41,7 +35,7 @@ public class detalleIngreso {
     
     
 
-    public detalleIngreso(int articuloId, String articuloCodigo, String articuloNombre, int cantidad, double precio, double subtotal) {
+    public DetalleIngreso(int articuloId, String articuloCodigo, String articuloNombre, int cantidad, double precio, double subtotal) {
         this.articuloId = articuloId;
         this.articuloCodigo = articuloCodigo;
         this.articuloNombre = articuloNombre;
